@@ -1,5 +1,6 @@
 import Image from "next/image";
-import TopNav from "./components/TopNav";
+import TopNav from "@/app/components/TopNav";
+import Tabs from "@/app/components/Tabs";
 
 export default function Home() {
   return (
@@ -13,6 +14,10 @@ export default function Home() {
           height={678}
           className="object-cover"
         />
+      </section>
+      <section className="max-container px-4 mt-32 ">
+        <h2 className="text-black font-bold text-5xl mb-24 ">eIFU Downloads</h2>
+        <Tabs />
       </section>
     </section>
   );

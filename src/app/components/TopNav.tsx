@@ -3,7 +3,7 @@ import React from "react";
 
 const TopNav = () => {
   return (
-    <section className="py-10 flex items-center justify-center">
+    <section className="bg-black py-10 flex items-center justify-center">
       <Image
         src="/assets/our-logo.svg"
         alt="Our company logo"
