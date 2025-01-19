@@ -1,0 +1,49 @@
+import { Select, SelectItem } from "@heroui/react";
+import { Download, Share2 } from "lucide-react";
+import React from "react";
+
+interface DocumentViewerProps {
+  title: string;
+  documentName: string;
+  versions: string[];
+}
+
+const DocumentViewer: React.FC<DocumentViewerProps> = ({ title, versions }) => {
+  return (
+    <section className="pt-14 pb-6 flex items-center justify-between border-b-[3px] border-[#ADADAD]">
+      <div>
+        <h5 className="font-bold text-3xl mb-4">{title}</h5>
+        <div className="flex items-center gap-3">
+          <button className="border-2 border-[#757575] rounded-md w-36 h-12 flex items-center justify-center gap-1">
+            <Share2 strokeWidth={1.75} />
+            <p className="font-bold text-base text-black">공유</p>
+          </button>
+          <button className="border-2 border-[#757575] rounded-md w-36 h-12 flex items-center justify-center gap-1">
+            <Download strokeWidth={2.25} />
+            <p className="font-bold text-base text-black">다운로드</p>
+          </button>
+        </div>
+      </div>
+
+      <div>
+        <Select
+          className="min-w-60"
+          placeholder="년도"
+          classNames={{
+            value: ["text-lg"],
+            listbox: [`text-[25px]`],
+            trigger: [`h-[48px] `],
+          }}
+          variant="bordered"
+          disallowEmptySelection={true}
+        >
+          {versions.map((version, index) => (
+            <SelectItem key={index}>{version}</SelectItem>
+          ))}
+        </Select>
+      </div>
+    </section>
+  );
+};
+
+export default DocumentViewer;
