@@ -1,22 +1,22 @@
 const dummyFiles = [
   {
     title: "ARK KIT User Manual",
-    documentName: "ARK KIT User Manual",
+    documentName: "Afile.docx",
     versions: ["2021", "2020", "2019"],
   },
   {
     title: "ARK KIT User Manual",
-    documentName: "ARK KIT User Manual",
+    documentName: "file.docx",
     versions: ["2021", "2020", "2019"],
   },
   {
     title: "Dr.INVIVO User Manual",
-    documentName: "ARK KIT User Manual",
+    documentName: "file.docx",
     versions: ["2021", "2020", "2019"],
   },
   {
     title: "AiD Regen User Manual",
-    documentName: "ARK KIT User Manual",
+    documentName: "file.docx",
     versions: ["2021", "2020", "2019"],
   },
 ];
