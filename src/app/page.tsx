@@ -15,8 +15,10 @@ export default function Home() {
           className="object-cover"
         />
       </section>
-      <section className="max-container px-4 mt-32 ">
-        <h2 className="text-black font-bold text-5xl mb-24 ">eIFU Downloads</h2>
+      <section className="max-container px-4 mt-32 max-md:mt-12">
+        <h2 className="text-black font-bold text-5xl max-md:text-3xl mb-24 max-md:mb-12">
+          eIFU Downloads
+        </h2>
         <Tabs />
       </section>
     </section>
