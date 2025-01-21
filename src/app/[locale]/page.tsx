@@ -12,7 +12,7 @@ export default function Home() {
           alt="cover"
           width={1920}
           height={678}
-          className="object-cover"
+          className="object-cover max-sm:aspect-square"
         />
       </section>
       <section className="max-container px-4 mt-32 max-md:mt-12">
