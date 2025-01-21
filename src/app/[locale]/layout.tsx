@@ -48,7 +48,7 @@ export default async function LocaleLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <HeroUIProvider>{children}</HeroUIProvider>
         </NextIntlClientProvider>
       </body>
     </html>
