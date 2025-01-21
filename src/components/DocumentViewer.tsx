@@ -1,5 +1,6 @@
 import { Select, SelectItem } from "@heroui/react";
 import { Download, Share2 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 interface DocumentViewerProps {
@@ -23,6 +24,8 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({
     document.body.removeChild(link);
   };
 
+  const t = useTranslations("DocumentViewer");
+
   return (
     <section className="pt-14 pb-6 flex items-center justify-between border-b-[3px] border-[#ADADAD]">
       <div>
@@ -30,10 +33,10 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({
         <div className="flex max-sm:flex-col sm:items-center gap-3">
           <button
             aria-label="Share button"
-            className="border-2 border-[#757575] rounded-md w-36 h-12 flex items-center justify-center gap-1"
+            className="border-2 border-[#757575] rounded-md min-w-36 px-3 h-12 flex items-center justify-center gap-1"
           >
             <Share2 strokeWidth={1.75} />
-            <p className="font-bold text-base text-black">공유</p>
+            <p className="font-bold text-base text-black">{t("share")}</p>
           </button>
           <button
             aria-label="Download button"
@@ -41,10 +44,10 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({
               console.log("Download button clicked");
               downloadPdf(documentName);
             }}
-            className="border-2 border-[#757575] rounded-md w-36 h-12 flex items-center justify-center gap-1"
+            className="border-2 border-[#757575] rounded-md min-w-36 px-3 h-12 flex items-center justify-center gap-1"
           >
             <Download strokeWidth={2.25} />
-            <p className="font-bold text-base text-black">다운로드</p>
+            <p className="font-bold text-base text-black">{t("download")}</p>
           </button>
         </div>
       </div>
@@ -52,7 +55,7 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({
       <div>
         <Select
           className="min-w-32"
-          placeholder="년도"
+          placeholder={t("version")}
           classNames={{
             value: ["text-lg"],
             listbox: [`text-[25px]`],

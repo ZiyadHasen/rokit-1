@@ -1,5 +1,55 @@
 {
   "HomePage": {
-    "category": "카테고리"
+    "category": "카테고리",
+    "options": {
+      "language": {
+        "placeholder": "국가",
+        "options": [
+          {
+            "en": "English"
+          },
+          {
+            "kr": "Korean"
+          },
+          {
+            "it": "Itali"
+          }
+        ]
+      },
+      "product": {
+        "placeholder": "제품",
+        "options": [
+          {
+            "one": "One"
+          },
+          {
+            "two": "Two"
+          },
+          {
+            "three": "Three"
+          }
+        ]
+      },
+      "year": {
+        "placeholder": "년도",
+        "options": [
+          {
+            "2022": "2022"
+          },
+          {
+            "2023": "2023"
+          },
+          {
+            "2024": "2024"
+          }
+        ]
+      }
+    }
+  },
+
+  "DocumentViewer": {
+    "share": "공유",
+    "download": "다운로드",
+    "version": "버젼"
   }
 }

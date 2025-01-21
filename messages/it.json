@@ -1,5 +1,54 @@
 {
   "HomePage": {
-    "category": "Categoria"
+    "category": "Categoria",
+    "options": {
+      "language": {
+        "placeholder": "Lingua",
+        "options": [
+          {
+            "en": "English"
+          },
+          {
+            "kr": "Korean"
+          },
+          {
+            "it": "Itali"
+          }
+        ]
+      },
+      "product": {
+        "placeholder": "Prodotto",
+        "options": [
+          {
+            "one": "One"
+          },
+          {
+            "two": "Two"
+          },
+          {
+            "three": "Three"
+          }
+        ]
+      },
+      "year": {
+        "placeholder": "Anno",
+        "options": [
+          {
+            "2022": "2022"
+          },
+          {
+            "2023": "2023"
+          },
+          {
+            "2024": "2024"
+          }
+        ]
+      }
+    }
+  },
+  "DocumentViewer": {
+    "share": "condividere",
+    "download": "Scaricamento",
+    "version": "versione"
   }
 }
