@@ -13,6 +13,7 @@ export default function Home() {
           width={1920}
           height={678}
           className="object-cover max-sm:aspect-square"
+          aria-label="Hero section image"
         />
       </section>
       <section className="max-container px-4 mt-32 max-md:mt-12">

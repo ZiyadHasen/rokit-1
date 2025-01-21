@@ -10,6 +10,7 @@ const TopNav = () => {
         className="max-sm:h-10 max-sm:w-auto"
         width={264}
         height={43}
+        aria-label="Our logo"
       />
     </section>
   );

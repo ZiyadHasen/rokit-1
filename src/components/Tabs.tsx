@@ -32,9 +32,9 @@ const Tabs = () => {
   return (
     <section>
       <section className="flex items-center gap-11 max-lg:gap-5 max-sm:gap-1 mb-11 max-sm:mb-6">
-        {tabs.map((tab, index) => (
+        {tabs.map((tab) => (
           <button
-            aria-label={`tab-${index}`}
+            aria-label={`${tab.value}`}
             key={tab.value}
             className={`py-4 px-11 max-md:px-5 max-md:py-2 max-sm:px-3 max-sm:py-1 rounded-md  ${
               currentTab === tab.value ? "bg-black" : "bg-transparent"
