@@ -1,6 +1,6 @@
 import Image from "next/image";
-import TopNav from "@/app/components/TopNav";
-import Tabs from "@/app/components/Tabs";
+import TopNav from "@/components/TopNav";
+import Tabs from "@/components/Tabs";
 
 export default function Home() {
   return (

@@ -1,5 +1,8 @@
 import { Select, SelectItem } from "@heroui/react";
 
+import { useTranslations } from "next-intl";
+// import { Link } from "@/app/i18n/routing";
+
 import dummyFiles from "../data/dummyFiles";
 import DocumentViewer from "./DocumentViewer";
 
@@ -8,11 +11,12 @@ const products = ["product01", "product01", "product01"];
 const years = ["2023", "2024", "2025"];
 
 const KitTab = () => {
+  const t = useTranslations("HomePage");
   return (
     <section className="pb-24">
       <section className="flex max-lg:flex-col items-center gap-56 max-lg:gap-3 py-8 max-sm:py-6 border-y-[5px] border-[#ADADAD]">
         <h4 className="font-bold text-black text-nowrap text-3xl max-sm:text-2xl">
-          카테고리
+          {t("category")}
         </h4>
         <div className="w-full flex items-center gap-12 max-sm:gap-5">
           <Select
