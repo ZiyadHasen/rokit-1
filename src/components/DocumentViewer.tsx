@@ -1,5 +1,5 @@
 import { Select, SelectItem } from "@heroui/react";
-import { Download, Share2 } from "lucide-react";
+import { Download } from "lucide-react";
 import { useTranslations } from "next-intl";
 import React from "react";
 
@@ -27,24 +27,24 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({
   const t = useTranslations("DocumentViewer");
 
   return (
-    <section className="pt-14 pb-6 flex items-center justify-between border-b-[3px] border-[#ADADAD]">
+    <section className="pt-14 max-sm:pt-7 pb-6 flex items-center justify-between border-b-[3px] border-[#ADADAD]">
       <div>
-        <h5 className="font-bold text-3xl max-sm:text-lg mb-4">{title}</h5>
-        <div className="flex max-sm:flex-col sm:items-center gap-3">
-          <button
+        <h5 className="font-bold text-3xl max-sm:text-base mb-4">{title}</h5>
+        <div>
+          {/* <button
             aria-label="Share button"
             className="border-2 border-[#757575] rounded-md min-w-36 px-3 h-12 flex items-center justify-center gap-1"
           >
             <Share2 strokeWidth={1.75} />
             <p className="font-bold text-base text-black">{t("share")}</p>
-          </button>
+          </button> */}
           <button
             aria-label="Download button"
             onClick={() => {
               console.log("Download button clicked");
               downloadPdf(documentName);
             }}
-            className="border-2 border-[#757575] rounded-md min-w-36 px-3 h-12 flex items-center justify-center gap-1"
+            className="border-2 border-[#757575] rounded-md sm:min-w-36  px-3 h-12 flex items-center justify-center gap-1"
           >
             <Download strokeWidth={2.25} />
             <p className="font-bold text-base text-black">{t("download")}</p>

@@ -14,16 +14,16 @@ const tabs: Tab[] = [
     value: "all",
   },
   {
-    label: "3D Bioprinter",
-    value: "3d",
+    label: "Skin",
+    value: "skin",
   },
   {
-    label: "KIT",
-    value: "kit",
+    label: "Cartilage",
+    value: "cartilage",
   },
   {
-    label: "AiD Regen",
-    value: "aid",
+    label: "Kidney",
+    value: "kidney",
   },
 ];
 
