@@ -1,7 +1,7 @@
 const dummyFiles = [
   {
     title: "ARK KIT User Manual",
-    documentName: "Afile.docx",
+    documentName: "file.docx",
     versions: ["2021", "2020", "2019"],
   },
   {

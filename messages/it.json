@@ -1,5 +1,13 @@
 {
   "HomePage": {
+    "header": {
+      "mainHeader": "Cerca per articolo, lingua e altro.",
+      "subHeader": "Il nostro sito Web fornisce manuali utente per prodotti fabbricati e forniti da ROKIT Healthcare.",
+      "firstContent": "Dopo aver cercato il manuale utente desiderato, è possibile scaricarlo in formato PDF.",
+      "secondContent": "Se desideri un manuale utente stampato, contatta info@rokit.co.kr. Il manuale utente può essere modificato in qualsiasi momento.",
+      "thirdContent": "Per verificare il manuale utente più recente, effettuare una ricerca nel sito Web.",
+      "forthContent": "Se non è disponibile un manuale utente per il tuo prodotto o hai domande, contatta info@rokit.co.kr per supporto."
+    },
     "category": "Categoria",
     "options": {
       "language": {
@@ -12,12 +20,12 @@
             "kr": "Korean"
           },
           {
-            "it": "Itali"
+            "it": "Italic"
           }
         ]
       },
       "product": {
-        "placeholder": "Prodotto",
+        "placeholder": "Articolo",
         "options": [
           {
             "one": "One"
@@ -44,6 +52,11 @@
           }
         ]
       }
+    },
+
+    "footer": {
+      "info": "12° piano, 9 Digital-ro 10-gil, Geumcheon-gu, Seoul (08514) TEL: 1899-7296",
+      "copyRight": "COPYRIGHT ⓒ ROKIT HEALTHCARE, INC. ALL RIGHTS RESERVED"
     }
   },
   "DocumentViewer": {

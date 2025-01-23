@@ -7,8 +7,15 @@ import { usePathname, useRouter } from "@/i18n/routing";
 import dummyFiles from "../data/dummyFiles";
 import DocumentViewer from "./DocumentViewer";
 
-const products = ["All", "3D Bio Printer", "KIT", "AiD Regen"];
-// const years = ["2023", "2024", "2025"];
+const items = [
+  "All",
+  "Dr. INVIVO(Printer)",
+  "KIT (AI Regen)",
+  "AI Software (AiD Regen)",
+  "Network Guide",
+  "Firmware",
+  "Maintenance",
+];
 
 const KitTab = () => {
   const pathname = usePathname();
@@ -68,25 +75,10 @@ const KitTab = () => {
             variant="bordered"
             disallowEmptySelection={true}
           >
-            {products.map((product, index) => (
-              <SelectItem key={index}>{product}</SelectItem>
+            {items.map((item, index) => (
+              <SelectItem key={index}>{item}</SelectItem>
             ))}
           </Select>
-          {/* <Select
-            className="max-w-1/3"
-            placeholder={t("options.year.placeholder")}
-            classNames={{
-              value: ["text-lg"],
-              listbox: [`text-[25px]`],
-              trigger: [`h-[48px] `],
-            }}
-            variant="bordered"
-            disallowEmptySelection={true}
-          >
-            {years.map((year, index) => (
-              <SelectItem key={index}>{year}</SelectItem>
-            ))}
-          </Select> */}
         </div>
       </section>
 

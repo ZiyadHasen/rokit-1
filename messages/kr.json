@@ -1,5 +1,13 @@
 {
   "HomePage": {
+    "header": {
+      "mainHeader": "제품, 국가 등으로 검색하십시오.",
+      "subHeader": "저희 웹사이트는 ROKIT Healthcare에서 제조 및 제공하는 제품에 대한 사용설명서를 제공하고 있습니다.",
+      "firstContent": "원하시는 사용설명서를 검색한 후, PDF 형식으로 다운로드 할 수 있습니다.",
+      "secondContent": "만약 인쇄된 사용설명서를 원하시는 경우, info@rokit.co.kr로 문의 주시기 바랍니다. 사용설명서는 언제든지 개정될 수 있습니다.",
+      "thirdContent": "최신 사용설명서를 확인하시려면 웹사이트에서 검색해주시기 바랍니다.",
+      "forthContent": "제품에 해당하는 사용설명서가 없는 경우나 궁금한 점이 있으시면 info@rokit.co.kr로 연락하여 지원을 받으시기 바랍니다."
+    },
     "category": "카테고리",
     "options": {
       "language": {
@@ -12,7 +20,7 @@
             "kr": "Korean"
           },
           {
-            "it": "Itali"
+            "it": "Italic"
           }
         ]
       },
@@ -44,6 +52,11 @@
           }
         ]
       }
+    },
+
+    "footer": {
+      "info": "서울특별시 금천구 디지털로 10길9, 12층 (08514) TEL : 1899-7296",
+      "copyRight": "COPYRIGHT ⓒ ROKIT HEALTHCARE, INC. ALL RIGHTS RESERVED"
     }
   },
 
