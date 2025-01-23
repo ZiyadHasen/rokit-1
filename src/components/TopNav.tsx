@@ -5,7 +5,8 @@ import React, { useEffect } from "react";
 import Cookies from "js-cookie";
 
 // The url of the backend
-const baseURL = "http://localhost:3000/users";
+// const baseURL = "http://localhost:3000/users";
+const baseURL = "/api/user";
 
 const userDataCollection = async () => {
   // Check if the user data is already collected within the last 3 days, if so do nothing
