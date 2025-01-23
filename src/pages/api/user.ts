@@ -1,7 +1,7 @@
 import mysql from "mysql2/promise";
 import { NextApiRequest, NextApiResponse } from "next";
 
-let connectionParams = {
+const connectionParams = {
   host: "localhost",
   port: 3306,
   user: "root",
