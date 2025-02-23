@@ -3,13 +3,11 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
 import Cookies from "js-cookie";
+import LanguageSelector from "./dropdownLang";
 
-// The url of the backend
-// const baseURL = "http://localhost:3000/users";
 const baseURL = "/api/user";
 
 const userDataCollection = async () => {
-  // Check if the user data is already collected within the last 3 days, if so do nothing
   if (Cookies.get("userDataCollected")) return;
 
   try {
@@ -18,27 +16,17 @@ const userDataCollection = async () => {
     );
 
     const result = await response.json();
-    const ipAddress = result.query;
-    const country = result.country;
-    const region = result.regionName;
-    const city = result.city;
+    const { query: ipAddress, country, regionName: region, city } = result;
 
-    fetch(baseURL, {
+    await fetch(baseURL, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        ipAddress,
-        country,
-        region,
-        city,
-      }),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ipAddress, country, region, city }),
     });
 
     Cookies.set("userDataCollected", "true", { expires: 3 });
   } catch (error) {
-    console.log(error);
+    console.error("Data collection error:", error);
   }
 };
 
@@ -48,17 +36,25 @@ const TopNav = () => {
   }, []);
 
   return (
-    <section className="bg-black py-10 max-sm:py-6 flex items-center justify-center">
-      <Image
-        src="/assets/our-logo.svg"
-        alt="Our company logo"
-        className="max-sm:h-10 max-sm:w-auto"
-        width={264}
-        height={43}
-        aria-label="Our logo"
-        loading="eager"
-        priority={true}
-      />
+    <section className="bg-black min-h-[100px] h-auto py-4 sm:py-0 flex items-center justify-center px-4 sm:px-6 relative">
+      {/* Logo Container */}
+      <div className="flex-shrink-0 w-full max-w-[180px] sm:max-w-[220px] md:max-w-[260px] relative aspect-[3/1] self-start sm:self-center">
+        <Image
+          src="/assets/headerlogo.svg"
+          alt="Company logo"
+          className="object-contain object-left"
+          fill
+          sizes="(max-width: 640px) 180px, (max-width: 768px) 220px, 260px"
+          loading="eager"
+          priority
+          aria-label="Company logo"
+        />
+      </div>
+
+      {/* Language Selector */}
+      <div className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2">
+        <LanguageSelector />
+      </div>
     </section>
   );
 };
